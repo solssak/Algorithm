@@ -4,3 +4,13 @@ function solution(array, height) {
 
   return answer.length;
 }
+
+//아이스 아메리카노
+function solution(money) {
+  const americano = 5500;
+
+  const glass = Math.floor(money / americano);
+  const exchange = money % americano;
+
+  return [glass, exchange];
+}
