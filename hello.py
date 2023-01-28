@@ -6,7 +6,6 @@ def solution(a):
 
     # 위 코드는 리스트가 홀수일 때만 적용되는 경우
 
-
 # 문자열 안에 문자열
 def solution(str1, str2):
     return 1 if str2 in str1 else 2
@@ -15,3 +14,112 @@ def solution(str1, str2):
 #       return 1
 #    else: return 2
     
+
+# 모음 제거
+def solution(my_string):
+
+  remove = ['a', "e", "i", "o", "u"]
+  for i in remove:
+    my_string = my_string.replace(i,'')
+  return my_string
+  
+# 순서쌍의 개수 >> 다시 공부하기
+def solution(n):
+    answer = 0 
+    for i in range(n):
+        if n % (i+1) == 0:
+            answer +=1
+    return answer
+
+# 피자 나눠먹기 >> 다시 공부하기
+import math 
+
+def solution(slice, n):
+    return math.ceil(n/slice)
+
+# 문자열 정렬하기 (1)
+def solution(my_string):
+    answer = []
+    
+    for i in my_string:
+        if i.isdigit():
+            answer.append(int(i))
+            # answer += i >> 기존 내 것. 왜 안됐는지 생각해보기.
+    answer.sort()
+    return answer
+
+# 인덱스 바꾸기
+def solution(my_string, num1, num2):
+    l_string = list(my_string)
+    l_string[num1],l_string[num2] = l_string[num2],l_string[num1]
+    return "".join(l_string)
+
+    # 문자열을 즉시 수정할 수 없음 >> list()
+    # 문자열 합치기 >> ''.join 
+
+# 최댓값 만들기(1)
+def solution(numbers):
+    numbers = sorted(numbers)
+    return max(numbers[0] * numbers[1], numbers[-2] * numbers[-1])
+    
+    # sorted(), sort() 차이
+    # sorted 는 변수에 재할당 해줘야함. sort() 는 불필요
+
+# 피자 나눠 먹기(2)
+def solution(n):
+    # pizza * 6 = total_slice
+    # total_slice % n == 0
+    
+    # 피자는 1판부터 사직함
+    pizza = 1
+    # 피자를 6조각으로 나누었을 때 딱 딸어질 때까지 while 루프
+    while (pizza * 6) % n:
+        pizza += 1
+    return pizza
+
+# 다른 풀이 >> gcd 알아보기
+import math
+
+def solution(n):
+    return (n * 6) // math.gcd(n, 6) // 6
+
+# 약수 구하기
+def solution(n):
+    answer = []
+    for i in range(1, n+1):
+        if n % i == 0: 
+            answer.append(i)
+# 내 실수 =>  answer = answer.append(i)
+# AttributeError: 'NoneType' object has no attribute 'append'
+    return answer
+
+# 369 게임
+def solution(order):
+    answer = 0
+    while order:
+        if order % 10 in [3, 6, 9]:
+            answer += 1
+        order //= 10
+        
+    return answer
+
+# 다른 풀이
+def solution(order):
+    order = str(order)
+    
+    return order.count('3') + order.count('6') + order.count('9')
+
+
+# 문자열 정렬하기 (2) >> 온전한 내 힘으로 해결했다!!!!!!!
+def solution(my_string):
+    answer = ''
+    
+    for i in my_string.lower():
+        answer += i
+            
+    return "".join(sorted(answer))
+# "" 형태의 문자열에 정렬을 하고 싶으면 "".join() 메서드 이용!
+
+# 다른 풀이 (리스트 컴프리헨션)
+def solution(my_string):
+    return ''.join(sorted(my_string.lower()))
