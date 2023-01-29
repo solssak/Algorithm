@@ -123,3 +123,33 @@ def solution(my_string):
 # 다른 풀이 (리스트 컴프리헨션)
 def solution(my_string):
     return ''.join(sorted(my_string.lower()))
+
+def solution(num, k):
+    answer = 0
+    for i in num:
+        if k in num:
+            return 
+        else:
+            return -1
+    return answer
+
+# 합성수 찾기 >> 다시 공부하기
+def solution(n):
+    answer = 0
+    for i in range(2, n+1):
+        for j in range(2, i):
+            if i % j == 0:
+                answer += 1
+                break
+    return answer
+
+# n의 배수 고르기 >> 리스트에 정수 넣을 때 append()
+def solution(n, numlist):
+  answer =[]
+  for i in numlist:
+    if i % n == 0:
+      answer.append(i)
+  return answer
+
+def solution(numbers):
+  return [i*2 for i in numbers]
