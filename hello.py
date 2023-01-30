@@ -153,3 +153,59 @@ def solution(n, numlist):
 
 def solution(numbers):
   return [i*2 for i in numbers]
+
+# 중복된 문자 제거
+def solution(my_string):
+    answer = ''
+    
+    for i in my_string:
+        if i not in answer:
+            answer += i
+            
+    return answer
+
+# 한 번만 등장한 문자
+def solution(s):
+    answer = ""
+    # 사전 순으로 정렬한 문자열
+    for alpha in "abcdefghijklmonqprstuvwxyz":
+        # 한 번만 등장하는 문자
+        if 1 == s.count(alpha):
+            answer += alpha
+    return answer
+
+# 다른 풀이
+def solution(s):
+    return "".join(sorted([ alpha for alpha in s if s.count(alpha) == 1 ]))
+# ==
+def solution(s):
+    answer = ""
+    for alpha in s:
+        if 1 == s.count(alpha):
+            answer += alpha
+    return "".join(sorted(answer))
+
+# 숨어있는 숫자의 덧셈(2)
+def solution(my_string):
+    answer = 0
+    num = ''
+    
+    for i in my_string:
+        if i.isdecimal():
+            num += i
+        else:
+            if len(num) == 0:
+                continue
+            answer += int(num)
+            num = ''
+            
+    if len(num) != 0:
+        answer += int(num)
+    
+    return answer
+
+# 다른 풀이
+def solution(my_string):
+    s = ''.join(i if i.isdigit() else ' ' for i in my_string)
+    return sum(int(i) for i in s.split())
+
