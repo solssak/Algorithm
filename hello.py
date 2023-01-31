@@ -209,3 +209,7 @@ def solution(my_string):
     s = ''.join(i if i.isdigit() else ' ' for i in my_string)
     return sum(int(i) for i in s.split())
 
+# 진료 순서 정하기
+def solution(emergency):
+    sorted_emergency = sorted(emergency, reverse = True)
+    return [sorted_emergency.index(i)+1 for i in emergency]
