@@ -213,3 +213,7 @@ def solution(my_string):
 def solution(emergency):
     sorted_emergency = sorted(emergency, reverse = True)
     return [sorted_emergency.index(i)+1 for i in emergency]
+
+# 주사위의 개수
+def solution(box, n):
+    return (box[0]//n) * (box[1]//n) * (box[2]//n)
