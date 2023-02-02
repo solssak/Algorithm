@@ -217,3 +217,9 @@ def solution(emergency):
 # 주사위의 개수
 def solution(box, n):
     return (box[0]//n) * (box[1]//n) * (box[2]//n)
+
+# 세균 증식
+
+def solution(n, t):
+    return n << t
+    # 비트 쉬프트 연산
