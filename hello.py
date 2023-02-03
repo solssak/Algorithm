@@ -223,3 +223,10 @@ def solution(box, n):
 def solution(n, t):
     return n << t
     # 비트 쉬프트 연산
+
+# 암호 해독
+def solution(cipher, code):
+    answer = ''
+    for i in range(code-1, len(cipher),code):
+        answer += cipher[i] # 문자열인데 [i] 로 넣어주는 이유? >> for문이 배열로 return되기 때문?
+    return answer
