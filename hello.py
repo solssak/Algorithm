@@ -13,7 +13,6 @@ def solution(str1, str2):
 #    if str2 in str1:
 #       return 1
 #    else: return 2
-    
 
 # 모음 제거
 def solution(my_string):
@@ -22,7 +21,7 @@ def solution(my_string):
   for i in remove:
     my_string = my_string.replace(i,'')
   return my_string
-  
+
 # 순서쌍의 개수 >> 다시 공부하기
 def solution(n):
     answer = 0 
@@ -157,12 +156,13 @@ def solution(numbers):
 # 중복된 문자 제거
 def solution(my_string):
     answer = ''
-    
+
     for i in my_string:
         if i not in answer:
             answer += i
             
     return answer
+
 
 # 한 번만 등장한 문자
 def solution(s):
@@ -229,4 +229,9 @@ def solution(cipher, code):
     answer = ''
     for i in range(code-1, len(cipher),code):
         answer += cipher[i] # 문자열인데 [i] 로 넣어주는 이유? >> for문이 배열로 return되기 때문?
+    return answer
+
+# 중앙값 구기
+def solution(num1, num2):
+    answer = int((num1 / num2) * 1000)
     return answer

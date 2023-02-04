@@ -14,3 +14,5 @@ function solution(money) {
 
   return [glass, exchange];
 }
+
+function a() {}
