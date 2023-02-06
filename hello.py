@@ -239,3 +239,10 @@ def solution(num1, num2):
 # 짝수는 싫어요
 def solution(n):
     return [i for i in range(1, n+1, 2)]
+
+# 자릿수 더하기
+def solution(n):
+    answer = 0
+    for i in str(n):
+        answer += int(i)
+    return answer
