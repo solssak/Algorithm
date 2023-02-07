@@ -246,3 +246,10 @@ def solution(n):
     for i in str(n):
         answer += int(i)
     return answer
+
+# 제곱 수 판별하기
+def solution(n):
+    answer = 0
+    num = n ** 0.5 # 0.5로 곱해서 정수가 나오면 제곱근
+    
+    return 1 if num == int(num) else 2
