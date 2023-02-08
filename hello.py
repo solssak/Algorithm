@@ -258,3 +258,17 @@ def solution(n):
 def solution(my_string):
     
     return my_string.swapcase()
+
+# 모스 부호 (1)
+def solution(letter):
+    morse = { 
+    '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
+    '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
+    '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
+    '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
+    '-.--':'y','--..':'z'
+}
+    answer = ''
+    for i in letter.split():
+        answer += morse[i]
+    return answer
