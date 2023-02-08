@@ -253,3 +253,8 @@ def solution(n):
     num = n ** 0.5 # 0.5로 곱해서 정수가 나오면 제곱근
     
     return 1 if num == int(num) else 2
+
+# 대문자와 소문자
+def solution(my_string):
+    
+    return my_string.swapcase()
