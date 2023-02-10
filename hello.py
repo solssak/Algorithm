@@ -272,3 +272,11 @@ def solution(letter):
     for i in letter.split():
         answer += morse[i]
     return answer
+
+# 삼각형의 완성조건 (1)
+def solution(sides):
+    sides.sort()
+    if sides[2] < sides[1] + sides[0]:
+        return 1
+    else:
+        return 2
