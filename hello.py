@@ -280,3 +280,13 @@ def solution(sides):
         return 1
     else:
         return 2
+
+# 옷가게 할인받기
+def solution(price):
+    if price >= 500000:
+        return int(price - price*0.2)
+    if 300000 > price >= 100000:
+        return int(price - price*0.05)
+    if 500000 > price >= 300000:
+        return int(price - price*0.1)
+    return int(price)
