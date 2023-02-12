@@ -290,3 +290,9 @@ def solution(price):
     if 500000 > price >= 300000:
         return int(price - price*0.1)
     return int(price)
+
+# 편지
+def solution(message):
+    answer = len(message) * 2
+    # message의 길이를 구하고 2배 해준다.
+    return answer
