@@ -296,3 +296,7 @@ def solution(message):
     answer = len(message) * 2
     # message의 길이를 구하고 2배 해준다.
     return answer
+
+# 2차원으로 만들기
+def solution(num_list, n):
+     return [num_list[i*n : (i+1)*n] for i in range(len(num_list) // n)]
