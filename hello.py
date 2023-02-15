@@ -300,3 +300,7 @@ def solution(message):
 # 2차원으로 만들기
 def solution(num_list, n):
      return [num_list[i*n : (i+1)*n] for i in range(len(num_list) // n)]
+
+# A로 B만들기
+def solution(before, after):
+    return 1 if sorted(before) == sorted(after) else 0
