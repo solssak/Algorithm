@@ -304,3 +304,13 @@ def solution(num_list, n):
 # A로 B만들기
 def solution(before, after):
     return 1 if sorted(before) == sorted(after) else 0
+
+# 숫자 찾기
+def solution(num, k):
+    num = str(num)
+    k = str(k)
+    
+    if k in num:
+        return num.index(k) + 1
+    else:
+        return -1
