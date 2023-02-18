@@ -332,4 +332,12 @@ def solution(my_string, n):
         answer.append(i * n)
     return ''.join(answer)
 
+# 배열의 유사도
+def solution(s1, s2):
+    answer = 0
+    for i in s1:
+        if i in s2:
+            answer += 1 # 여기 기억하기. 개수 넣어 표현하는 것 **********
+    return answer
+
 # ''.join[i*n return for i in my_string]
