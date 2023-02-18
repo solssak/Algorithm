@@ -325,3 +325,11 @@ def solution(n):
         k -= 1 
     return k
 
+# 문자 반복 출력하기
+def solution(my_string, n):
+    answer = []
+    for i in my_string:
+        answer.append(i * n)
+    return ''.join(answer)
+
+# ''.join[i*n return for i in my_string]
