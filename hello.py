@@ -340,4 +340,9 @@ def solution(s1, s2):
             answer += 1 # 여기 기억하기. 개수 넣어 표현하는 것 **********
     return answer
 
-# ''.join[i*n return for i in my_string]
+# 배열 회전시키기
+def solution(numbers, direction):
+    if direction == "right":
+        return numbers[-1:] + numbers[:-1]
+    elif direction == "left":
+        return numbers[1:] + numbers[:1]
