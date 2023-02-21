@@ -346,3 +346,9 @@ def solution(numbers, direction):
         return numbers[-1:] + numbers[:-1]
     elif direction == "left":
         return numbers[1:] + numbers[:1]
+
+# 중복된 숫자 개수
+def solution(array, n):
+    answer = array.count(n)
+    return answer
+    
