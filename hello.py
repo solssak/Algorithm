@@ -356,3 +356,14 @@ def solution(array, n):
 def solution(my_string, letter):
     answer = my_string.replace(letter,"")
     return answer
+
+# 피자 나눠먹기(2)
+def solution(n):
+    # pizza * 6 = total_slice
+    # total_slice % n == 0
+    
+    pizza = 1
+    while (pizza * 6) % n:
+        pizza += 1
+    return pizza
+        
