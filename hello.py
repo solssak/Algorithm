@@ -366,4 +366,9 @@ def solution(n):
     while (pizza * 6) % n:
         pizza += 1
     return pizza
-        
+
+# 피자 나눠먹기(3)
+import math 
+
+def solution(slice, n):
+    return math.ceil(n/slice)
