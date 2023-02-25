@@ -372,3 +372,17 @@ import math
 
 def solution(slice, n):
     return math.ceil(n/slice)
+
+# 점의 위치 구하기
+def solution(dot):
+    if dot[0] > 0 and dot[1] > 0:
+        return 1
+    
+    if(dot[0] < 0 and dot[1] > 0):
+        return 2
+    
+    if(dot[0] < 0 and dot[1] < 0):
+        return 3
+    
+    if(dot[0] > 0 and dot[1] < 0):
+        return 4
