@@ -386,3 +386,10 @@ def solution(dot):
     
     if(dot[0] > 0 and dot[1] < 0):
         return 4
+
+# 외계행성의 나이
+def solution(age):
+    result = ""
+    for i in str(age):
+        result += "abcdefghij"[int(i)]
+    return result
