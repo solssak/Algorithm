@@ -393,3 +393,8 @@ def solution(age):
     for i in str(age):
         result += "abcdefghij"[int(i)]
     return result
+
+# 나이 출력
+def solution(age):
+    answer = 2022 - (age -1)
+    return answer
