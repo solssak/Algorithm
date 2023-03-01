@@ -398,3 +398,9 @@ def solution(age):
 def solution(age):
     answer = 2022 - (age -1)
     return answer
+
+# 최댓값 만들기(2)
+def solution(numbers):
+    # numbers = sorted(numbers)
+    numbers.sort()
+    return max(numbers[0] * numbers[1], numbers[-2] * numbers[-1])
