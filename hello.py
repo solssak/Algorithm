@@ -404,3 +404,11 @@ def solution(numbers):
     # numbers = sorted(numbers)
     numbers.sort()
     return max(numbers[0] * numbers[1], numbers[-2] * numbers[-1])
+
+# 머쓱이보다 키 큰사람
+def solution(array, height):
+    answer = 0
+    for i in array:
+        if i > height:
+            answer += 1
+    return answer
