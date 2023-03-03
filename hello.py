@@ -412,3 +412,7 @@ def solution(array, height):
         if i > height:
             answer += 1
     return answer
+
+# 몫 구하기
+def solution(num1, num2):
+    return int(num1/num2)
