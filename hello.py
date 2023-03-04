@@ -416,3 +416,11 @@ def solution(array, height):
 # 몫 구하기
 def solution(num1, num2):
     return int(num1/num2)
+
+# 개미 군단
+def solution(hp):
+    a = hp // 5
+    b = (hp - (5*a)) // 3
+    c = (hp-(5*a)-(3*b)) // 1
+        
+    return a+b+c
