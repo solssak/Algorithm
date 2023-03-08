@@ -425,4 +425,8 @@ def solution(hp):
         
     return a+b+c
 
-# test
+# 배열 두배 만들기
+
+# 리스트 컴프리헨션
+def solution(numbers):
+    return [num*2 for num in numbers]

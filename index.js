@@ -27,3 +27,24 @@ function solution(numbers) {
   }
   return (answer = sum / numbers.length);
 }
+
+function solution(data) {
+  arr = data.split(" ");
+  check = 0;
+  answers = [];
+  answers.push(arr[0]);
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < answers.length; j++) {
+      if (arr[i] == answers[j]) {
+        check = 1;
+      }
+    }
+    if (check == 0) {
+      answers.push(arr[i]);
+    }
+    check = 0;
+  }
+
+  return answers.join(" ");
+}
