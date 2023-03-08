@@ -432,4 +432,5 @@ def solution(numbers):
     return [num*2 for num in numbers]
 
 # git 오류 체킹
-# git 오류 체킹
+# git 오류 체킹 1
+# git 오류 체킹 2
