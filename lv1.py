@@ -208,3 +208,135 @@ def solution(arr):
         arr.append(-1)
             
     return arr
+
+# 약수의 개수와 덧셈
+
+def solution(left, right):
+    answer = 0
+    
+    for i in range(left, right +1):
+        cnt = 0
+        for j in range(1, i + 1):
+            if i % j == 0:
+                cnt += 1
+        if cnt % 2 == 0:
+            answer += i
+        else: 
+            answer -= i
+    
+    return answer
+
+# 부족한 금액 계산하기
+
+def solution(price, money, count):
+    result = 0
+    
+    
+    for i in range(1, count + 1):
+        result += price * i
+        
+    if money > result:
+        return 0
+    else:
+        return result - money
+
+# 문자열 다루기 기본
+
+def solution(s):
+    
+    if len(s) == 4 or len(s) == 6:
+        if s.isdigit() == True:
+            return True
+        else:
+            return False
+    else:
+            return False
+
+# 가운데 글자 가져오기
+
+def solution(s):
+    answer = ''
+    
+    if len(s) % 2 == 0:
+        answer += s[len(s) // 2-1: len(s) // 2+1]
+    if len(s) % 2 != 0:
+        answer += s[len(s) // 2]
+    
+    return answer
+
+# 내적
+
+def solution(a, b):
+    answer = 0
+    
+    for i in range(len(b)):
+        answer += a[i]*b[i]
+    
+    return answer
+
+# 이상한 문자 만들기
+
+def solution(s):
+    answer = ''
+    a = s.split(' ')
+    
+    for i in a:
+        for j in range(len(i)):
+            if j % 2 == 0:
+                answer += i[j].upper()
+            else:
+                answer += i[j].lower()
+        answer += ' '
+        
+    return answer[0: -1]
+
+# 같은 숫자는 싫어
+
+def solution(arr):
+    answer = [arr[0]]
+    
+    for i in range(1, len(arr)):
+        if arr[i] != arr[i-1]:
+            answer.append(arr[i])
+    
+    return answer
+
+def solution(arr):
+    answer = []
+
+for i in arr:
+    if answer[-1] != i or len(answer) ==0:
+        answer.append(i)
+
+    return answer
+            
+# 3진법 뒤집기
+
+def solution(n):
+    answer = []
+    result = 0
+    
+    # n을 3으로 나눈 나머지 값을 []에 차례로 넣어주고? (3진법)
+    while n != 0:
+        answer.append(n % 3)
+        n //= 3
+        
+    # 다시 10진법으로 전환
+    for i in range(len(answer)):
+        result += answer[i]*3**(len(answer) - i - 1)
+                  # 전체 answer의 길이 - 현재 index - 1= 
+        
+    return result
+# 다른 풀이 (int)
+def solution(n):
+    answer = ''
+    result = 0
+    
+    # n을 3으로 나눈 나머지 값을 []에 차례로 넣어주고? (3진법)
+    while n != 0:
+        answer += str(n % 3)
+        n //= 3
+        
+    # 다시 10진법으로 전환
+    return  int(answer, 3)
+
