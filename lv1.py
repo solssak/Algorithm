@@ -304,9 +304,9 @@ def solution(arr):
 def solution(arr):
     answer = []
 
-for i in arr:
-    if answer[-1] != i or len(answer) ==0:
-        answer.append(i)
+  for i in arr:
+      if len(answer) ==0 or answer[-1] != i:
+          answer.append(i)
 
     return answer
             
