@@ -340,3 +340,13 @@ def solution(n):
     # 다시 10진법으로 전환
     return  int(answer, 3)
 
+# K번쨰 수
+def solution(array, commands):
+    answer = []
+    
+    for i in commands:
+        new_list = array[i[0]-1:i[1]]
+        new_list.sort()
+        answer.append(new_list[i[2]-1])
+        
+    return answer
