@@ -350,3 +350,66 @@ def solution(array, commands):
         answer.append(new_list[i[2]-1])
         
     return answer
+
+# 두개 뽑아서 더하기
+
+def solution(numbers):
+    answer = []
+
+    for i in range(len(numbers)):
+        for j in range(i+1, len(numbers)):
+            if numbers[i] + numbers[j] not in answer:
+                answer.append(numbers[i] + numbers[j])
+    answer.sort()
+
+    return answer
+
+# 콜라 문제
+
+def solution(a, b, n):
+    answer = 0
+    
+    while n >= a:
+        answer += n//a*b
+        n = (n//a*b + n % a)
+        
+    return answer
+
+# 푸드 파이트 대회
+
+def solution(food):
+    answer = ''
+    
+    for i in range(1, len(food)):
+        answer += food[i] // 2 * str(i)
+        
+    return answer + '0' + answer[::-1]
+
+# 가장 가까운 글자
+
+def solution(s):
+    answer = []
+    new_list = {}
+    
+    for i in range(len(s)):
+        
+        if s[i] in new_list:
+            answer.append(i - new_list[s[i]])
+        else:
+            answer.append(-1)
+            
+        new_list[s[i]]=i                        # 최신화
+        
+    return answer
+
+# 2016년 
+
+def solution(a, b):
+    month = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    day = ['FRI','SAT','SUN','MON','TUE','WED','THU']
+    
+    return day[(sum(month[:a-1]) + b-1) % 7]
+    
+    
+    
+    
