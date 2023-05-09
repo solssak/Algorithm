@@ -410,6 +410,21 @@ def solution(a, b):
     
     return day[(sum(month[:a-1]) + b-1) % 7]
     
+
+# 소수 만들기 
+
+from itertools import combinations as cb
+
+def solution(nums):
+    answer = 0
     
+    for i in cb(nums, 3):
+        cand = sum(i)
+        for j in range(2, cand):
+            if cand % j == 0:
+                break
+        else:
+            answer += 1
+    return answer
     
     
