@@ -428,3 +428,33 @@ def solution(nums):
     return answer
     
     
+# 모의고사
+
+def solution(answers):
+    answer = []
+    a = [1, 2, 3, 4, 5]
+    b = [2, 1, 2, 3, 2, 4, 2, 5]
+    c = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+    scoreA = 0
+    scoreB = 0
+    scoreC = 0
+    
+    for i in range(len(answers)):
+        if answers[i] == a[i%len(a)]:
+            scoreA += 1
+        if answers[i] == b[i%len(b)]:
+            scoreB += 1
+        if answers[i] == c[i%len(c)]:
+            scoreC += 1
+    max(scoreA, scoreB, scoreC)
+    if max(scoreA, scoreB, scoreC) == scoreA:
+        answer.append(1)
+    if max(scoreA, scoreB, scoreC) == scoreB:
+        answer.append(2)
+    if max(scoreA, scoreB, scoreC) == scoreC:
+        answer.append(3)
+    
+    return answer
+    
+        
+        
