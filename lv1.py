@@ -304,7 +304,7 @@ def solution(arr):
 def solution(arr):
     answer = []
 
-  for i in arr:
+    for i in arr:
       if len(answer) ==0 or answer[-1] != i:
           answer.append(i)
 
@@ -457,4 +457,45 @@ def solution(answers):
     return answer
     
         
+# 카드 뭉치
+
+def solution(cards1, cards2, goal):
+    answer = ''
+    
+    for i in range(len(goal)):
+        if len(cards1) != 0 and goal[i] == cards1[0]:
+            cards1.pop(0)
+        elif len(cards2) != 0 and goal[i] == cards2[0]:
+            cards2.pop(0)
+        else:
+            return "No"
         
+        
+    return "Yes"
+
+# 과일 장수
+
+def solution(k, m, score):
+    answer = 0
+    new_list = []
+    score.sort(reverse = True)
+    
+    for i in range(0, len(score), m):
+        if len(score[i : i+m]) == m:
+            answer += min(score[i : i+m]) * m
+        
+    return answer
+
+# 명예의 전당
+
+def solution(k, score):
+    answer = []
+    new_list = []
+    
+    for i in range(len(score)):
+        new_list.append(score[i])
+        if len(new_list) == k+1:
+            new_list.remove(min(new_list))
+        answer.append(min(new_list))
+    
+    return answer
