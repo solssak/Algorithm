@@ -499,3 +499,17 @@ def solution(k, score):
         answer.append(min(new_list))
     
     return answer
+
+# 폰켓몬
+
+def solution(nums):
+    # 중복을 제거한 요소들의 개수를 센다
+    n = len(set(nums))
+    # 선택 가능한 폰켓몬 종류의 수를 계산한다
+    k = len(nums) // 2
+    # 선택 가능한 폰켓몬 종류의 수가 N/2개 이하이면, 모든 종류의 폰켓몬을 선택할 수 있으므로 정답은 중복을 제거한 요소의 개수가 된다
+    if k >= n:
+        return n
+    # 선택 가능한 폰켓몬 종류의 수가 N/2개보다 크면, 정답은 N/2가 된다
+    else:
+        return k
