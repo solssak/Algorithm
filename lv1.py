@@ -513,3 +513,17 @@ def solution(nums):
     # 선택 가능한 폰켓몬 종류의 수가 N/2개보다 크면, 정답은 N/2가 된다
     else:
         return k
+    
+# 추억 점수
+
+def solution(name, yearning, photo):
+    answer = []
+    
+    for i in photo:
+        count = 0
+        for j in i:
+            if j in name:
+                idx = name.index(j)
+                count += yearning[idx]
+        answer.append(count)
+    return answer
