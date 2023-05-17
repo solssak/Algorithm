@@ -45,3 +45,46 @@ def solution(A,B):
         
     return answer
     
+# 다음 큰 숫자
+# while
+def solution(n):
+    answer = 0
+    
+    count_one = bin(n)[2:].count('1')
+    
+    while True:
+        n = n + 1
+        i_count_one = bin(n)[2:].count('1')
+        if count_one == i_count_one:
+            answer += n
+            break
+    return answer
+# for
+def solution(n):
+    answer = 0
+    
+    count_one = bin(n)[2:].count('1')
+    
+    for i in range(n+1, 1000001):
+        i_count_one = bin(i)[2:].count('1')
+        if count_one == i_count_one:
+            answer += i
+            break
+
+    return answer
+
+# 숫자의 표현
+
+def solution(n):
+    answer = 0
+
+    for i in range(1, n+1):
+        result = 0
+        for j in range(i, n+1):
+            result += j
+            if result == n:
+                answer += 1
+            elif result > n:
+                break
+    
+    return answer
