@@ -539,3 +539,48 @@ def solution(numbers):
             answer += i
 
     return answer
+
+# 실패율
+
+def solution(N, stages):
+    result = {}
+    length = len(stages)
+    for i in range(1, N + 1):
+        if length != 0:                 # 분모가 0인 케이스 예외처리
+            count = stages.count(i)     # 파이썬 count 함수로  
+            result[i] = count / length
+            length -= count     # 총 길이에서 count를 빼주고 다음꺼 재계산
+        else:
+            result[i] = 0
+    return sorted(result, key=lambda x: result[x], reverse=True)
+
+# 소수 찾기
+
+def solution(n):
+    count = 0
+    for i in range(2, n+1):
+        is_prime = True
+        for j in range(2, int(i**0.5)+1):
+            if i % j == 0:
+                is_prime = False
+                break
+        if is_prime:
+            count += 1
+    return count
+
+# 기사 단원의 무기
+
+def solution(number, limit, power):
+    answer = 0
+    
+    for i in range(1, number + 1):
+        count = 0
+        for j in range(1, int((i**0.5)+1)):
+            if j*j == i:
+                count += 1
+            elif i % j == 0:
+                count += 2
+        if count > limit:
+            count = power
+        answer += count
+    return answer

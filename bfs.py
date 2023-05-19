@@ -1,5 +1,7 @@
+# BFS (너비 우선 탐색)
+
 def bfs(root):
-    visited = []
+    visited = [] # 그래프에서는 필수, level order는 방문 순서 표시 용도
     if root is None:
         return 0
     q = deque()
@@ -15,3 +17,7 @@ def bfs(root):
     return visited
 
 bfs(root)
+
+
+
+
