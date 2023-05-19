@@ -584,3 +584,36 @@ def solution(number, limit, power):
             count = power
         answer += count
     return answer
+
+# [1차] 다트 게임
+
+def solution(dartResult):
+    answer = 0
+    bonus = {'S':1,'D':2,'T':3}
+    s = [0] * 3
+    cnt = 0
+    idx = 0
+    
+    while cnt != 3:
+        if idx + 2 <= len(dartResult):
+            if dartResult[idx+1].isdigit():
+                score = 10
+                b = dartResult[idx+2]
+                idx += 3
+            else:
+                [score, b] = dartResult[idx:idx+2]
+                idx += 2
+            s[cnt] = int(score)**bonus[b]
+        if idx < len(dartResult):
+            if not dartResult[idx].isdigit():
+                if dartResult[idx] == '*':
+                    if cnt > 0:
+                        s[cnt-1] *= 2
+                    s[cnt] *= 2
+                else:
+                    s[cnt] *= -1
+                idx += 1
+        cnt += 1
+            
+    return sum(s)
+
