@@ -112,3 +112,5 @@ def solution(progresses, speeds):
         answer.append(result)
             
     return answer
+
+.
